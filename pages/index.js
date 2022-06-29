@@ -1,5 +1,7 @@
 import useSWR, { mutate } from "swr";
 import { useState, useEffect } from "react";
+import Todos from "../components/Todos";
+
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Home() {
@@ -88,59 +90,22 @@ export default function Home() {
         </form>
 
         <ul>
-          {data
-            ?.filter((item) => item.pinned)
-            .map(({ id, title }) => (
-              <div className="mt-2 w-full flex justify-between text-[#010A1B] font-['Inter'] ">
-
-                <label className="flex items-center justify-items-start">
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 border-0 focus:ring-0 "
-                    
-                  />
-                  <span className="ml-2">
-                    <li key={id}>{title}</li>
-                  </span>
-                </label>
-                <div className="text-[#999C9F]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                  </svg>
-                </div>
-              </div>
-            ))}
+        {data?.filter((item) => item.pinned)
+            .map(({ id, title , checked }) => (
+              <Todos
+              id={id}
+              title={title}
+              isChecked = {checked}
+              />
+            ))},
           <hr className="border-solid border-sm my-11"></hr>
-          {data
-            ?.filter((item) => !item.pinned)
-            .map(({ id, title }) => (
-              <div className="mt-2 w-full flex justify-between text-[#010A1B] font-['Inter'] ">
-                <label className="flex items-center justify-items-start">
-                  <input
-                    type="checkbox"
-                    class="w-4 h-4 border-0 focus:ring-0 checked:bg-white border-[#999C9F] "
-                    
-                  />
-                  <span className="ml-2">
-                    <li key={id}>{title}</li>
-                  </span>
-                </label>
-                <div className="text-[#999C9F]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                  </svg>
-                </div>
-              </div>
+          {data?.filter((item) => !item.pinned)
+            .map(({ id, title , checked }) => (
+              <Todos
+              id={id}
+              title={title}
+              isChecked = {checked}
+              />
             ))}
         </ul>
       </div>
