@@ -33,7 +33,7 @@ export default function Home() {
   
   return (
     <div
-      className=" flex w-3/5 h-auto bg-white mt-5 mb-5 justify-center flex-col text-gray-200 rounded"
+      className=" flex w-[718px] h-[800px] bg-white mt-5 mb-5  flex-col text-gray-200 rounded"
       id="todoitem"
     >
       <h1 className="w-36 font-['Inter'] border-b-4 border-[#FF7964] text-center mx-auto text-[#194591] font-semibold text-[20px]">
