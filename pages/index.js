@@ -1,3 +1,4 @@
+
 import useSWR, { mutate } from "swr";
 import { useState, useEffect } from "react";
 import Todos from "../components/Todos";
@@ -91,20 +92,22 @@ export default function Home() {
 
         <ul>
         {data?.filter((item) => item.pinned)
-            .map(({ id, title , checked }) => (
+            .map(({ id, title , checked, pinned }) => (
               <Todos
               id={id}
               title={title}
               isChecked = {checked}
+              isPinned = {pinned}
               />
             ))},
           <hr className="border-solid border-sm my-11"></hr>
           {data?.filter((item) => !item.pinned)
-            .map(({ id, title , checked }) => (
+            .map(({ id, title , checked , pinned}) => (
               <Todos
               id={id}
               title={title}
               isChecked = {checked}
+              isPinned = {pinned}
               />
             ))}
         </ul>
