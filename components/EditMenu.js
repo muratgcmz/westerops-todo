@@ -4,7 +4,7 @@ import { mutate } from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const EditMenu = ({ id, isPinned }) => {
+const EditMenu = ({ id, isPinned, title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
 //   Pin Todo By Id "PATCH" Function
@@ -29,6 +29,21 @@ const deleteTodo = async (id) => {
         'Content-Type': 'application/json',
       }
     });
+    mutate("/api/todos");
+  };
+
+
+   //Update By Id "PATCH" Function
+   const UpdateTodo = async (id, title) => {
+    await fetcher("/api/todos/" + `${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ title: title }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
+    });
+    deleteTodo()
     mutate("/api/todos");
   };
 
@@ -83,11 +98,11 @@ const deleteTodo = async (id) => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="#010A1B"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>

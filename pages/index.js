@@ -32,10 +32,17 @@ export default function Home() {
 
   
   return (
+    
+    <div>
+    <img src="https://www.topdevelopers.co/upload/20210630083556511080325.png" alt="westerops" className="flex h-10 mx-auto mt-3 w-25 outline-none " ></img>
+    
+  
     <div
       className=" flex w-[718px] h-[800px] bg-white mt-5 mb-5  flex-col text-gray-200 rounded"
       id="todoitem"
     >
+    
+      
       <h1 className="w-36 font-['Inter'] border-b-4 border-[#FF7964] text-center mx-auto text-[#194591] font-semibold text-[20px]">
         ToDo List
       </h1>
@@ -112,6 +119,7 @@ export default function Home() {
             ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 }
