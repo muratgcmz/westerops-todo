@@ -6,6 +6,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const EditMenu = ({ id, isPinned, title }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [updateItem, setUpdateItem] = useState(title);
 
 //   Pin Todo By Id "PATCH" Function
     const pinTodo = async (id, isPinned) => {
@@ -33,17 +34,15 @@ const deleteTodo = async (id) => {
   };
 
 
-   //Update By Id "PATCH" Function
-   const UpdateTodo = async (id, title) => {
+  const updateTodo = async (id, text) => {
     await fetcher("/api/todos/" + `${id}`, {
       method: "PATCH",
-      body: JSON.stringify({ title: title }),
+      body: JSON.stringify({ title: text }),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       }
     });
-    deleteTodo()
     mutate("/api/todos");
   };
 
@@ -90,7 +89,9 @@ const deleteTodo = async (id) => {
            {isPinned ? <span>Unpin </span>  : <span>Pin on the top</span>} 
           </div>
         </Popover.Button>
-        <button className="w-3/4 mb-2 flex flex-start">
+        <button className="w-3/4 mb-2 flex flex-start"
+        onClick={() => setIsOpen(true)}
+        >
           <div>
             <svg
               className="w-5 inline mr-2"
@@ -98,17 +99,43 @@ const deleteTodo = async (id) => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="#010A1B"
-              strokeWidth="2"
+              stroke-width="2"
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                stroke-linecap="round"
+                stroke-linejoin="round"
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
             <span>Update</span>
           </div>
         </button>
+        {isOpen && (
+          <div>
+            <input
+                className=" block w-full"
+                value={updateItem}
+                name="update"
+                onChange={(e) => setUpdateItem(e.target.value)}
+            />
+            <div className="flex justify-between ">
+                <Popover.Button
+                className="bg-green-600 rounded"
+                onClick={(e) => {
+                updateTodo(id, updateItem);
+                setIsOpen(false)
+                }}>Edit
+                </Popover.Button>
+
+                <button
+                className="bg-red-600 rounded"
+                onClick={() => setIsOpen(false)}
+                >Close
+                </button>
+            </div>
+          </div>
+        )}
+        
         <Popover.Button
           className="w-3/4  mb-2 flex flex-start"
 

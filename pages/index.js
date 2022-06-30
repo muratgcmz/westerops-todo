@@ -40,7 +40,7 @@ export default function Home() {
       className=" flex w-[718px] h-[800px] 
       bg-white mt-5 mb-5  flex-col text-gray-200 rounded
       
-      phone:
+      
       "
       id="todoitem"
     >
