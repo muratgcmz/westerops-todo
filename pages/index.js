@@ -22,7 +22,6 @@ export default function Home() {
 
 const handleSubmit = (e) => {
   e.preventDefault();
- // mutate("/api/todos", [...data, todoItem], false);
   console.log(todoItem);
   addTodo(todoItem);
   setTodoItem("");
