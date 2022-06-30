@@ -3,13 +3,13 @@
         {
             "id": 1643718566727,
             "title": "Example Todo 1",
-            "checked": true,
+            "checked": false,
             "pinned": true
         },
         {
             "id": 1643718584922,
             "title": "Example Todo 2",
-            "checked": true,
+            "checked": false,
             "pinned": true
         },
         {
@@ -27,7 +27,13 @@
         {
             "id": 1656524380647,
             "title": "Example Todo 4",
-            "checked": false,
+            "checked": true,
+            "pinned": false
+        },
+        {
+            "id": 1656581417604,
+            "title": "dasdasdsa",
+            "checked": true,
             "pinned": false
         }
     ]

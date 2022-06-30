@@ -34,11 +34,14 @@ export default function Home() {
   return (
     
     <div>
-    <img src="https://www.topdevelopers.co/upload/20210630083556511080325.png" alt="westerops" className="flex h-10 mx-auto mt-3 w-25 outline-none " ></img>
-    
+      <h1 className="text-center font-sans text-[#FFFFFF] text-lg"><strong><span className="text-[#21A7F9]">/</span><span className="text-[#FF7964]">/</span><span className="text-[#00CCDB]">O</span> WesterOps</strong></h1>
   
     <div
-      className=" flex w-[718px] h-[800px] bg-white mt-5 mb-5  flex-col text-gray-200 rounded"
+      className=" flex w-[718px] h-[800px] 
+      bg-white mt-5 mb-5  flex-col text-gray-200 rounded
+      
+      phone:
+      "
       id="todoitem"
     >
     
@@ -107,7 +110,7 @@ export default function Home() {
               isPinned = {pinned}
               />
             ))},
-          <hr className="border-solid border-sm my-11"></hr>
+          <hr className="border-solid border-sm my-5"></hr>
           {data?.filter((item) => !item.pinned)
             .map(({ id, title , checked , pinned}) => (
               <Todos

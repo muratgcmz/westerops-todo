@@ -39,7 +39,7 @@ const checkTodo = async (id, check) => {
             </svg> : ""}
         <input
           type="checkbox"
-          className="w-4 h-4 border-0 focus:ring-0 checked:bg-white"
+          className="w-4 h-4  focus:ring-0 "
           checked={isChecked}
           onChange={(e) => checkTodo(id, e.target.checked)}
         />
