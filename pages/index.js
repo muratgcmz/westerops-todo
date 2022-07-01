@@ -7,7 +7,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Home() {
   const { data, error } = useSWR("/api/todos", fetcher);
   const [todoItem, setTodoItem] = useState(null);
-
+  // Add Todo  "POST" Function
   const addTodo = async (title) => {
     await fetcher("/api/todos", {
       method: "POST",

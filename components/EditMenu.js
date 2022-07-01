@@ -33,7 +33,7 @@ const deleteTodo = async (id) => {
     mutate("/api/todos");
   };
 
-
+//Update Todo By Id "PATCH" Function
   const updateTodo = async (id, text) => {
     await fetcher("/api/todos/" + `${id}`, {
       method: "PATCH",

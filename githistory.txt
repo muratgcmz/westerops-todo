@@ -1,0 +1,129 @@
+commit 9f9d71b40d4dd0e05495670528d979bc53aa0a61
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Thu Jun 30 22:56:48 2022 +0300
+
+    key props fixed
+
+ components/EditMenu.js | 8 ++++----
+ components/Todos.js    | 2 +-
+ pages/index.js         | 4 +++-
+ 3 files changed, 8 insertions(+), 6 deletions(-)
+
+commit dd3501b1b08c40efc315dee4c855698ebb6d792a
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Thu Jun 30 22:44:19 2022 +0300
+
+    done
+
+ pages/index.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 0a92a9c61ab50df06bb8841aae8c2a3c2331c199
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Thu Jun 30 22:42:56 2022 +0300
+
+    project done
+
+ pages/api/database.json |  2 +-
+ pages/index.js          | 63 ++++++++++++++++++++-----------------------------
+ tailwind.config.js      | 42 ++++++++-------------------------
+ 3 files changed, 37 insertions(+), 70 deletions(-)
+
+commit de101f8d25e2f3dea0fb676aa90fa1ec50db8708
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Thu Jun 30 21:41:41 2022 +0300
+
+    updated done
+
+ components/EditMenu.js  | 43 +++++++++++++++++++++++++++++++++++--------
+ pages/api/database.json |  8 ++++----
+ pages/index.js          |  2 +-
+ 3 files changed, 40 insertions(+), 13 deletions(-)
+
+commit 24c2d89a79febf9bbf209af99dc5611b979cb110
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Thu Jun 30 15:13:08 2022 +0300
+
+    header done
+
+ components/Todos.js     |  2 +-
+ pages/_app.js           |  2 +-
+ pages/api/database.json | 12 +++++++++---
+ pages/index.js          | 11 +++++++----
+ tailwind.config.js      | 32 +++++++++++++++++++++++++++++---
+ 5 files changed, 47 insertions(+), 12 deletions(-)
+
+commit 2ddbc06a44508afea2f0137b5ee4a0be7fb7473c
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Wed Jun 29 23:19:17 2022 +0300
+
+    updated
+
+ components/EditMenu.js | 23 +++++++++++++++++++----
+ pages/index.js         |  8 ++++++++
+ 2 files changed, 27 insertions(+), 4 deletions(-)
+
+commit 83fa440e7b965dda62aabaa75b6e69b30565be82
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Wed Jun 29 21:17:02 2022 +0300
+
+    height done
+
+ pages/api/database.json | 12 ++++++++++++
+ pages/index.js          |  2 +-
+ tailwind.config.js      | 13 ++++++++++++-
+ 3 files changed, 25 insertions(+), 2 deletions(-)
+
+commit 46184deaa2b1e77218d48b1ec6263ce3132e8a0a
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Wed Jun 29 18:39:14 2022 +0300
+
+    pinned okay
+
+ components/EditMenu.js  | 165 ++++++++++++++++++++++++------------------------
+ components/Todos.js     |  19 +++++-
+ pages/api/database.json |  18 +-----
+ pages/index.js          |   7 +-
+ tailwind.config.js      |   9 ++-
+ 5 files changed, 117 insertions(+), 101 deletions(-)
+
+commit f0799ef6008f65fcc4695af48b46a820dc1e6d2a
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Wed Jun 29 14:04:51 2022 +0300
+
+    popover css
+
+ components/EditMenu.js  | 128 ++++++++++++++++++++++++++++++++++++++++++++++++
+ components/Todos.js     |  41 ++++++++++++++++
+ package-lock.json       |  19 +++++++
+ package.json            |   1 +
+ pages/api/database.json |   4 +-
+ pages/index.js          |  69 +++++++-------------------
+ 6 files changed, 208 insertions(+), 54 deletions(-)
+
+commit 05132e4c6d8692a949b6f55ef6ff01732a34caae
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Wed Jun 29 11:16:41 2022 +0300
+
+    started
+
+ .eslintrc.json           |    3 +
+ .gitignore               |   32 +
+ README.md                |  138 +
+ figma-design-details.png |  Bin 0 -> 511524 bytes
+ figma-design.png         |  Bin 0 -> 480904 bytes
+ next.config.js           |    6 +
+ package-lock.json        | 6272 ++++++++++++++++++++++++++++++++++++++++++++++
+ package.json             |   26 +
+ pages/_app.js            |    7 +
+ pages/api/database.json  |   34 +
+ pages/api/hello.js       |    5 +
+ pages/api/todos/[id].js  |   60 +
+ pages/api/todos/index.js |   43 +
+ pages/index.js           |  149 ++
+ postcss.config.js        |    6 +
+ public/favicon.ico       |  Bin 0 -> 25931 bytes
+ public/vercel.svg        |    4 +
+ styles/globals.css       |   20 +
+ tailwind.config.js       |   11 +
+ 19 files changed, 6816 insertions(+)
