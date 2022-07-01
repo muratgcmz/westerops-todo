@@ -1,3 +1,14 @@
+commit b94b958dfc418b98f349e1afa8a04b4a755fb5f6
+Author: muratgcmz <gocmezmurat@gmail.com>
+Date:   Fri Jul 1 14:59:57 2022 +0300
+
+    Commets and githistory done
+
+ components/EditMenu.js |   2 +-
+ githistory.txt         | 129 +++++++++++++++++++++++++++++++++++++++++++++++++
+ pages/index.js         |   2 +-
+ 3 files changed, 131 insertions(+), 2 deletions(-)
+
 commit 9f9d71b40d4dd0e05495670528d979bc53aa0a61
 Author: muratgcmz <gocmezmurat@gmail.com>
 Date:   Thu Jun 30 22:56:48 2022 +0300
