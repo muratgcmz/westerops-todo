@@ -7,22 +7,16 @@
             "pinned": true
         },
         {
-            "id": 1643718584922,
-            "title": "sfsasdad",
-            "checked": true,
-            "pinned": true
-        },
-        {
             "id": 1652861685792,
             "title": "westerops example",
             "checked": true,
-            "pinned": false
+            "pinned": true
         },
         {
             "id": 1656524367386,
             "title": "Example Todo 3",
             "checked": false,
-            "pinned": true
+            "pinned": false
         },
         {
             "id": 1656524380647,
