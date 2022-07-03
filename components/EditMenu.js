@@ -123,6 +123,7 @@ const deleteTodo = async (id) => {
                 className="bg-green-600 rounded"
                 onClick={(e) => {
                 updateTodo(id, updateItem);
+                console.log(title)
                 setIsOpen(false)
                 }}>Edit
                 </Popover.Button>

@@ -50,6 +50,7 @@ const checkIdTodo = async (id, check) => {
       <EditMenu 
       id = {id}
       isPinned = {isPinned}
+      title = {title}
       />
     </div>
   );
