@@ -6,7 +6,7 @@ import EditMenu from "./EditMenu";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const Todos = ({id,title,isChecked, isPinned }) => {
 
-const checkTodo = async (id, check) => {
+const checkIdTodo = async (id, check) => {
     await fetcher("/api/todos/" + `${id}`, {
       method: "PATCH",
       body: JSON.stringify({ checked: check }),
@@ -41,7 +41,7 @@ const checkTodo = async (id, check) => {
           type="checkbox"
           className="w-4 h-4  focus:ring-0 "
           checked={isChecked}
-          onChange={(e) => checkTodo(id, e.target.checked)}
+          onChange={(e) => checkIdTodo(id, e.target.checked)}
         />
         <span className="ml-2">
           <li key={id}>{title}</li>

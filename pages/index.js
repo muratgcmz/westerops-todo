@@ -8,7 +8,7 @@ export default function Home() {
   const { data, error } = useSWR("/api/todos", fetcher);
   const [todoItem, setTodoItem] = useState(null);
   // Add Todo  "POST" Function
-  const addTodo = async (title) => {
+  const addNewTodo = async (title) => {
     await fetcher("/api/todos", {
       method: "POST",
       body: JSON.stringify({ title: title }),
@@ -22,7 +22,7 @@ export default function Home() {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  addTodo(todoItem);
+  addNewTodo(todoItem);
   setTodoItem("");
 }
 
