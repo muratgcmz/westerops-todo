@@ -21,13 +21,13 @@
         {
             "id": 1656524380647,
             "title": "Example Todo 4",
-            "checked": true,
+            "checked": false,
             "pinned": false
         },
         {
             "id": 1656602958944,
             "title": "give me job",
-            "checked": true,
+            "checked": false,
             "pinned": false
         }
     ]
