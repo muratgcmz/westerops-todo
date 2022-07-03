@@ -86,7 +86,7 @@ const deleteTodo = async (id) => {
               </g>
             </svg>
 
-           {isPinned ? <span>Unpin </span>  : <span>Pin on the top</span>} 
+           {isPinned ? <span>Unpin </span>  : <span>Pin up</span>} 
           </div>
         </Popover.Button>
         <button className="w-3/4 mb-2 flex flex-start"
@@ -115,7 +115,7 @@ const deleteTodo = async (id) => {
             <input
                 className=" block w-full"
                 value={updateItem}
-                name="update"
+                name="update item"
                 onChange={(e) => setUpdateItem(e.target.value)}
             />
             <div className="flex justify-between ">
